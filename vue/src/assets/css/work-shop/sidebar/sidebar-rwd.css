@@ -1,0 +1,65 @@
+@media screen and (width < 1200px) {
+  .sidebar-container {
+    width: 100%;
+    max-height: 65.5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    padding: 0px;
+
+    box-sizing: border-box;
+  }
+
+  .sidebar-head {
+    display: none;
+  }
+
+  .sidebar-menu {
+    display: flex;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .sidebar-menu > li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .sidebar-menu > li:nth-child(5) {
+    display: none;
+  }
+
+  .sidebar-menu li h2 {
+    font-size: 9px;
+    /* fix */
+    margin: 0;
+    line-height: 13.5px;
+    /* fix */
+  }
+
+  .sidebar-menu a {
+    width: 100%;
+    max-height: 65.5px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 12px 12px;
+    box-sizing: border-box;
+
+    line-height: 0;
+    /* padding: 0px; */
+  }
+
+  .translate-btn {
+    display: none;
+  }
+
+  .translate-btn + p {
+    display: none;
+  }
+}

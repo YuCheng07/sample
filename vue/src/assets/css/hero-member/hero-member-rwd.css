@@ -1,0 +1,182 @@
+@media screen and (width < 1200px) {
+  .hero-member-main-content-container {
+    margin: 0px;
+    border-radius: 0px;
+  }
+
+  .hero-member-main-start-section-animation {
+    padding: 0 20px;
+  }
+
+  .hero-member-main-start-section-bg-img {
+    border-radius: 0px;
+  }
+
+  .hero-member-main-function-section-controlbar {
+    padding: 0 20px;
+  }
+
+  .hero-member-main-function-section-controlbar-title {
+    font-size: 30px;
+  }
+
+  .hero-member-main-function-section-content-item {
+    min-width: 320px;
+    height: 100%;
+  }
+
+  .hero-member-main-function-section-content-item-info p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .hero-member-main-function-section-content-item-info h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .hero-member-main-function-section-content-item:nth-child(1) {
+    margin-left: 20px;
+  }
+
+  .hero-member-main-function-section-content-last-item {
+    min-width: 320px;
+    height: 100%;
+    margin-right: 20px;
+  }
+
+  .hero-member-main-function-section-content-last-item-info p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .hero-member-main-function-section-content-last-item-info h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .hero-member-main-function-section-content-item-description-box-innerbox {
+    padding: 32px 16px;
+  }
+
+  .hero-member-main-function-section-content-item-description-box-innerbox
+    > h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .hero-member-main-function-section-content-item-description-box-innerbox-gifbox-text {
+    padding: 48px 16px;
+  }
+
+  .hero-member-main-function-section-content-item-description-box-innerbox-gifbox-text
+    > p {
+    font-size: 18px;
+  }
+
+  .hero-member-main-member-type-section-topbar {
+    padding: 0 20px;
+  }
+
+  .hero-member-main-member-type-section-topbar-title {
+    font-size: 30px;
+  }
+
+  .hero-member-main-member-type-section-content-item-outer {
+    min-width: 320px;
+  }
+
+  .hero-member-main-member-type-section-content-item-outer:nth-child(1) {
+    margin-left: 20px;
+  }
+
+  .hero-member-main-member-type-section-content-item-outer:nth-child(3) {
+    margin-right: 20px;
+  }
+
+  .hero-member-main-ad-artist-section-animation {
+    padding: 0 20px;
+  }
+
+  .hero-member-main-ad-artist-section-bg-img {
+    border-radius: 0px;
+  }
+
+  .hero-member-main-sponsors-creators-section-controlbar {
+    padding: 0 20px;
+  }
+
+  .hero-member-main-sponsors-creators-section-controlbar-title {
+    font-size: 30px;
+  }
+
+  .hero-member-main-sponsors-creators-section-content-item {
+    min-width: 320px;
+  }
+
+  .hero-member-main-sponsors-creators-section-content-item-info p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .hero-member-main-sponsors-creators-section-content-item-info h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .hero-member-main-sponsors-creators-section-content-item:nth-child(1) {
+    margin-left: 20px;
+  }
+
+  .hero-member-main-sponsors-creators-section-content-item:last-child {
+    margin-right: 20px;
+  }
+
+  .hero-member-main-stores-partners-section-animation {
+    padding: 0 20px;
+  }
+
+  .hero-member-main-fanpage-section-topbar {
+    padding: 0 20px;
+  }
+
+  .hero-member-main-fanpage-section-topbar-title {
+    font-size: 30px;
+  }
+
+  .hero-member-main-stores-about-section-controlbar {
+    padding: 0px 24px;
+  }
+
+  .hero-member-main-stores-about-section-controlbar-title {
+    font-size: 30px;
+  }
+
+  .hero-member-main-stores-about-section-content-item {
+    min-width: 320px;
+  }
+
+  .hero-member-main-stores-about-section-content-item-info p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .hero-member-main-stores-about-section-content-item-info h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .hero-member-main-stores-about-section-content-item:nth-child(1) {
+    margin-left: 20px;
+  }
+
+  .hero-member-main-stores-about-section-content-item:last-child {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (width < 768px) {
+  .hero-member-main-fanpage-section-content {
+    flex-wrap: wrap;
+  }
+}

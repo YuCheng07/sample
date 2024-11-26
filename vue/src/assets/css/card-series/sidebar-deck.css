@@ -1,0 +1,249 @@
+.sidebar-deck {
+  width: 490px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 17px;
+  overflow: hidden; 
+  background: linear-gradient(to bottom, #0C7266, #121212);
+  max-height: calc(100% - 16px); 
+  margin:8px 0 8px 8px;
+  color:white;
+  box-sizing: border-box;
+  position: absolute;
+  top:0;
+  bottom: 0;
+}
+
+.sidebar-header {
+  height: 64px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 15px 20px;
+  position: sticky;
+  background-color: #0C7266;
+  top:0;
+  box-sizing: border-box;
+}
+
+
+.sidebar-header > div:first-child > p:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sidebar-header > div:first-child > p:last-child {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.sidebar-header > div:last-child {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: black;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon i {
+  color: white;
+  font-size: 20px; 
+}
+
+.divder {
+  align-self: center;
+}
+
+.del-btn:hover {
+  background-color: #EF4444;
+}
+
+.xmark-btn:hover {
+  background-color: white;
+}
+
+.xmark-btn:hover i {
+  color: black;
+}
+
+
+.sidebar-deck-choice {
+  height: 54px;
+  display: flex;
+  gap: 5px;
+  padding: 10px 15px;
+}
+
+.sidebar-deck-control {
+  border-bottom: 1px solid grey;
+}
+
+.sidebar-deck-choice button {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: #27272A;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.sidebar-deck-choice button:hover {
+  background-color: #27272ac2;
+}
+
+.sidebar-deck-control {
+  height: 45px;
+  display: flex;
+  gap: 5px;
+  padding: 0 15px 10px;
+}
+
+.sidebar-deck-control button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #27272A;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.cash {
+  position: relative;
+}
+.cash:hover::before {
+  font-size: 13px;
+  width: 70px;
+  content: "開啟價格";
+  padding:3px;
+  background-color: #121212c3;
+  position: absolute;
+  bottom:-27px;
+  border-radius: 9999px;
+  z-index: 1;
+}
+
+.plus {
+  position: relative;
+}
+.plus:hover::before {
+  font-size: 13px;
+  width: 90px;
+  content: "新增卡片模式";
+  padding:3px;
+  background-color: #121212c3;
+  position: absolute;
+  bottom:-27px;
+  border-radius: 9999px;
+  z-index: 1;
+}
+
+.minus {
+  position: relative;
+}
+.minus:hover::before {
+  font-size: 13px;
+  width: 90px;
+  content: "刪除卡片模式";
+  padding:3px;
+  background-color: #121212c3;
+  position: absolute;
+  bottom:-27px;
+  border-radius: 9999px;
+  z-index: 1;
+}
+
+.card-content {
+  padding: 10px 15px;
+  flex-grow: 1;  
+  max-height: calc(100vh - 265px);
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.card-content h3 {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+  box-sizing: border-box;
+}
+
+.card-image {
+  display: flex;
+  position: relative;
+  object-fit: cover;
+  border-radius:10px ;
+  overflow: hidden;
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+.col-choice {
+  width:25%;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sidebar-footer {
+  height: 87px;
+  padding: 20px;
+  position: sticky;
+  bottom: 0;
+  background-color: #121212;
+  box-sizing: border-box;
+}
+
+.sidebar-footer button {
+  width: 100%; 
+  background-color: #aa6e079a; 
+  color: white; 
+  border: none; 
+  padding: 10px 0; 
+  font-size: 18px; 
+  border-radius: 17px; 
+  text-align: center;
+  box-sizing: border-box; 
+  opacity: 0.5;
+}
+
+.sidebar-footer button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.sidebar-footer button span svg{
+  display: inline;
+  vertical-align: middle;
+}
+
+.filter-tag {
+  position: sticky;
+  left: 270px;
+  top: 10px;
+  background-color: #3e86ba;
+  padding: 10px;
+}

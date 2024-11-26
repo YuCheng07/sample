@@ -1,0 +1,1913 @@
+<script setup>
+import Sidebar from '@/components/work-shop/SideBar.vue'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  import ("@/assets/js/login-homepage/css-control.js")
+  import ("@/assets/js/login-homepage/swiper")
+  import ("@/assets/js/login-homepage/fancybox")
+})
+
+
+
+</script>
+
+<template>
+    <div class="All">
+      <div class="container">
+        <!-- 通知與登入 -->
+        <a href="#" class="search-bar-logo" id="search-bar-logo">
+          <img src="https://bottleneko.app/icon.png" alt="" class="search-bar-logo-icon" />
+          <svg
+            data-v-11825b1c=""
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 3352.25 1012.65"
+            class="h-[1.5rem] default-transition fill-white search-bar-logo-svg"
+          >
+            <g data-name="圖層 1">
+              <path
+                d="M375.89 667.28c-9.25 7.98-16.57 14.08-23.63 20.33-54.89 48.79-109.69 97.62-164.4 146.51-13.47 12.04-27.34 21.24-46.6 20.94-9.4 0-18.85 4.07-28.41 5.54-22.46 3.35-35.57-11.64-27.04-32.63a72.1 72.1 0 0 1 18.7-26.73c79.89-69.25 160.12-138.13 240.68-206.63 27.44-23.38 36.74-74.45 16.62-104.79a290 290 0 0 0-25.1 16.21c-58.24 46.91-115.62 94.98-174.72 140.72-17.43 13.52-39.33 21.55-59.76 30.49-9.91 5.46-22.35 2.19-28.31-7.42-7.05-9.76-6.65-23.05.97-32.37 4.07-5.01 8.66-9.6 13.67-13.67 78.47-68.71 157.03-137.35 235.7-205.92 9.1-7.93 13.82-16.26 12.25-28.81-1.22-9.55-5.84-12.04-13.87-9.81a44.4 44.4 0 0 0-13.47 6.61c-55.12 38.83-110.14 77.79-165.06 116.89a156.4 156.4 0 0 0-26.02 22.72c-28.82 32.07-66.07 30.49-103.83 26.88-7.89-.04-14.25-6.47-14.2-14.36 0-1.51.26-3.01.74-4.45 3.41-10.82 8.23-23.58 16.62-30.09 36.39-28.36 74.04-55.14 111.8-81.72 17.89-12.65 21.09-19.87 11.38-38.98s-19.41-37.76-30.49-55.9c-14.33-24.14-16.72-48.38-2.24-74.5H84.44c-16.41.36-24.6-5.08-27.9-18.8-3.76-15.7.61-26.83 14.69-33.34 39-17.99 78.09-35.71 117.29-53.16 70.4-31.47 140.82-62.83 211.26-94.07 28.46-12.65 58.14-13.92 88.22-8.64 14.35 1.89 25.39 13.61 26.43 28.05 1.02 13.77-5.08 20.33-22.16 27.44-43.3 17.35-86.51 34.81-129.64 52.4a88 88 0 0 0-8.23 4.37c.92 1.37 1.32 2.69 1.88 2.74 27.8 3.76 40.1 21.4 43.81 47.57 2.1 10.46 4.75 20.81 7.93 31 8.05-6.55 15.71-13.58 22.92-21.04 35.57-42.13 80.85-54.53 133.3-44.37 9 1.7 17.09 6.59 22.77 13.77 9.35 13.92 21.34 8.13 32.27 7.01s15.25-10.77 15.25-21.34c0-21.24 0-42.49-.41-63.68 0-7.88-.36-15.75 0-23.58 1.27-21.65 11.94-33.13 33.69-34.61 24.39-1.63 48.89-2.39 73.33-2.74 16.87-.25 23.02 5.95 22.06 22.56-2.08 34.1-4.42 68.15-7.78 102.1-2.24 22.97 6.86 36.03 29.93 36.74 23.99.78 47.99.69 72.01-.25 20.99-.76 28.82-9.05 29.93-30.19 1.47-28.1 1.98-56.26 3.51-84.36 2.29-41.52 23.07-59.1 64.29-54.43 15.25 1.68 30.49 4.07 45.13 7.11 16.31 3.4 22.77 10.47 21.29 27.14-2.39 27.09-6.86 53.97-10.16 80.96-.81 6.4-1.78 12.81-2.03 19.26-.97 23.28 6.96 32.02 30.49 33.03 11.43.56 23.38-1.78 34.2.81a29.77 29.77 0 0 1 18.19 15.55c3.91 9.81-1.93 19.41-12.1 23.43-9.77 3.7-19.88 6.43-30.19 8.13-8.13 1.37-16.67 0-24.85 1.02-13.21 1.63-22.56 8.64-24.39 22.51a286 286 0 0 0-1.73 30.24c-.41 21.24 0 42.49-1.02 63.68-1.83 31.31-21.24 48.94-52.5 48.38-16.11-.3-32.32-1.37-48.38-3-20.63-2.13-30.49-12.4-28.92-32.98 2.13-30.49 6.15-60.58 9.2-90.87.62-5.96.86-11.95.71-17.94-.36-13.42-7.62-23.53-20.33-23.73-27.16-.47-54.32.82-81.31 3.86-6.51.76-13.57 10.57-17.43 17.79-8.74 16.31-6.35 33.74-2.13 51.28a270 270 0 0 1 8.64 50.26c.97 23.48-14.99 39.79-38.37 40.3-27.14.66-54.33-.25-81.31-1.27-2.74 0-7.42-5.39-7.67-8.54-1.93-23.38-3.61-46.81-4.12-70.23-.36-18.45 1.58-36.9 1.68-55.34 0-21.95-9.71-32.07-31.66-33.69-15.25-1.12-30.49-2.34-45.74-2.9-4.52-.32-9.04.62-13.06 2.69-31 18.35-62.05 36.59-92.44 55.9-18.65 11.79-22.36 23.53-13.26 43.6 26.68 59.1 35.57 121.97 40.66 185.64a1356 1356 0 0 1-20.33 372.1c-3.3 17.18-5.74 34.56-8.84 51.84-1.92 14.76-13.47 26.41-28.21 28.46-8.59 1.73-17.18 3.46-25.66 5.59a67.85 67.85 0 0 1-65.46-16.47c-11.69-10.16-25.41-18.5-37.91-27.85-11.84-8.84-19.26-19.97-16.52-35.57s14.48-20.33 27.39-23.94c15.25-4.12 30.49-8.08 45.74-11.18 12.35-2.49 20.73-8.13 21.29-21.45 2.34-59.05 4.56-118.11 6.66-177.16-.56-2.96-1.37-5.87-2.44-8.69ZM165.55 237.29c19.41 6.2 33.8 13.26 38.93 30.9 2.29 7.93 5.08 15.8 7.83 23.63 6.35 18.04 12.86 35.98 19.57 54.73 25.72-16.77 49.7-32.22 73.54-47.87 7.96-4.64 11.5-14.28 8.44-22.97-4.78-15.86-9.61-31.76-15.25-47.26-6.2-16.57-9.76-32.73-1.52-49.55.66-1.32 0-3.25 0-7.57l-131.52 65.96Z"
+              ></path>
+              <path
+                d="M1096.11 779.9c-1.42 64.13-2.69 128.27-4.22 192.35-.61 23.83-7.98 31.86-31.46 32.93-56.26 2.49-112.46 5.34-168.72 6.25-64.54 1.02-129.18 1.17-193.67-.3-49.8-1.17-99.56-5.08-149.31-8.33-22.21-1.37-30.49-10.52-29.27-34.61 2.13-46.09 6.76-92.09 7.62-138.18 2.03-107.48 2.44-215.02 3.46-322.5 0-26.43 7.62-35.88 33.59-40.3 45.74-7.88 91.17-3.46 136.35 4.47 71.15 12.6 142.91 14.64 215.12 12.04 54.33-1.93 108.86 0 163.23 1.27 21.75.51 32.07 13.98 28.41 36.69-13.87 85.63-13.26 171.92-11.13 258.22M912.24 965.65v.46c9.2-.66 18.4-1.17 27.54-1.93 25.87-2.13 34.1-12.5 29.93-38.32a269.1 269.1 0 0 1 3.1-105.65 128.5 128.5 0 0 0 3.61-25.97c.51-20.33-9.5-30.8-30.14-30.9-11.99 0-23.94 1.12-35.88 1.52-22.06.86-31.56 9.91-33.19 32.27-.86 12.4-1.02 24.85-2.29 37.2-3.71 36.18-8.33 72.27-11.43 108.5-1.37 15.5 5.49 21.8 21.09 22.72 9.15.56 18.4.1 27.65.1ZM648.28 850.19c0 25.82.56 51.63 0 77.45-.46 15.25 5.95 23.63 19.92 27.14 13.98 3.51 29.53 7.42 44.42 10.16 17.58 3.35 25.77-2.29 27.39-19.92 5.05-54.21 9.64-108.42 13.77-162.62 1.37-17.33-6.1-25.41-23.28-25.41-21.65-.41-43.35.46-65 0-9.45 0-13.06 3.1-12.91 12.81l-4.32 80.4Zm107.28-221.73c.46-9.66.97-19.31 1.37-29.02s.97-19.31 1.27-28.97c.71-24.29-9-36.39-32.83-39.54-15.25-2.08-31.2-3.35-46.8-4.12-18.35-.91-22.46 3.35-23.22 22.26-1.63 41.94-3.18 83.87-4.68 125.78-.66 18.5 7.83 28 26.02 28.26 21.19.3 42.43-.36 63.63 0 8.13 0 11.33-2.54 11.59-11.03.81-21.29 2.44-42.43 3.66-63.63Zm124.46 1.93h-2.39v60.98c0 18.8 7.47 26.63 25.87 26.12 17.08-.46 34.15-1.27 50.82-3.2 4.66-1.36 8.32-5 9.71-9.66 3.86-50.82 6.96-101.28 10.16-151.9.76-11.54-5.08-17.13-16.36-17.53-12.91-.46-25.82-.71-38.67-1.47-26.48-1.47-38.11 8.13-39.23 34.51-.56 20.58.1 41.37.1 62.15ZM2849.4 901.31a297.4 297.4 0 0 0 36.49-100.27c10.42-57.02 5.59-114.04-.86-171.01-.97-8.39-6.05-9.05-12.6-9-48.02.46-96.05.41-144.02 1.17-88.17 1.37-176.29 3.66-264.26 4.52-17.79 0-35.57-3.86-53.41-6.76-10.47-1.73-19.62-5.84-19.16-19.36s10.16-18.3 21.14-19.41c40.66-4.01 80.75-9.4 121.26-10.52 108.45-3.05 216.9-4.22 325.25-6.1 2.69 0 5.44-.46 8.79-.76 0-2.08.61-4.12 0-5.44-17.94-32.73-35.57-65.81-54.43-97.83-6.15-10.42-16.72-18.24-25.41-27.09a289 289 0 0 1-20.33-20.33c-14.13-17.74-12.86-33.24 3.2-49.09l148.5-147.12c3.2-3.2 6.2-6.56 11.59-12.25-6.81-.51-10.98-1.12-15.25-1.02l-248 5.49c-10.17.51-20.36.27-30.49-.71a32.8 32.8 0 0 1-18.85-7.17 35.13 35.13 0 0 1-7.78-20.68c0-2.44 8.74-7.42 13.87-7.93 55.9-5.44 111.8-12.7 168.06-14.59 86.39-2.85 172.79-1.93 259.18-2.49 8.31-.12 16.62.42 24.85 1.63 4.07.71 10.72 3.56 11.03 6.05-.13 4.82-2.07 9.41-5.44 12.86-27.75 30.85-55.9 60.98-83.8 92.09-34.81 38.88-68.86 78.36-103.77 117.14-7.27 8.08-5.89 14.53-.86 22.16 22.67 34.2 45.43 68.4 68 102.71 7.42 10.57 14.2 21.56 20.33 32.93 6.3 12.6 15.75 16.67 29.12 16.21 49.8-1.68 99.66-3.05 149.46-4.42 24.9-.66 49.85-.71 74.76-1.78 14.25-.5 28.44-1.98 42.49-4.42 11.64-2.08 17.33 1.78 19.87 12.91 4.83 20.79-6.96 39.44-30.49 42.64-31.51 4.32-63.27 7.52-94.98 8.89-53.97 2.29-107.99 2.69-161.96 4.01-4.01 0-8.03.86-12.7 1.42 1.68 25.71 3.91 50.46 4.73 75.21 2.69 80.45-9.2 158.2-43.96 231.64a160.5 160.5 0 0 1-56.31 65.2 54.79 54.79 0 0 1-51.38 7.11c-57.78-20.07-109.16-51.84-157.95-87.82-22.77-16.77-17.08-51.43 9.66-63.47 18.21-9 39.68-8.53 57.48 1.27 18.55 10.16 36.23 22 54.43 32.98 10.98 6.66 22.16 13.06 34.96 20.58ZM1697.51 476v-52.6c0-27.19.71-54.38.97-81.57 0-11.94.41-23.94-.41-35.83-2.34-33.39 13.21-51.23 45.74-60.98s64.74-6.66 97.07-10.16c10.98-1.17 22.46 4.47 33.85 5.39 15.25 1.22 30.85.91 46.3 1.32 11.84.3 24.75-2.13 35.57 1.63 32.47 11.38 41.11 20.33 34.81 49.4-9.55 44.47-3.46 88.12 2.64 132.13.97 7.27.31 14.74 1.07 22.11 3 28.56-11.99 46.14-36.84 54.73-20.33 7.11-42.18 10.16-62.31 15.25 3.84.95 7.72 1.69 11.64 2.24 11.03 1.12 22.16 1.22 33.08 2.85 19.11 2.85 25.82 19.51 13.37 34.4-7.8 8.46-16.3 16.24-25.41 23.28-7.57 6.45-15.25 12.6-12.1 24.14s13.47 12.7 23.38 12.91c32.83.66 59.36-9.3 75.42-40.66 18.04-35.57 47.47-51.33 87.61-46.6 15.25 1.73 30.49.36 45.23 3.76 23.89 5.54 28.2 24.44 11.64 43.04-9.15 10.16-17.84 21.04-26.63 31.71-.46.51 0 1.73 0 6.61 14.23 0 28.66-.71 42.99 0 9.9 1.26 19.72 3.04 29.42 5.34 10.16 1.78 19.82 3.51 29.78 5.08 5.08.66 10.16 0 15.25.61 11.18 1.58 22.46 6.35 22.61 18.4 0 10.98-11.13 14.08-21.09 16.41-27.9 6.5-55.9 13.11-84.77 8.59-6.45-.57-12.95-.23-19.31 1.02-15.25 2.13-23.68 13.82-22.26 29.63 1.52 17.33 9.86 23.07 27.19 24.19 31.15 1.98 62.25 5.08 93.2 9.4 10.62 1.42 21.14 7.32 20.33 20.68-.81 13.37-12.96 17.89-23.83 18.8-25.41 2.19-50.82 3-76.23 3.35-13.42 0-27.34 0-34.2 13.06a44.69 44.69 0 0 0 2.9 45.03c7.62 12.76 20.33 14.74 34 13.21 23.68-2.64 47.42-2.95 69.06 8.39 6.81 3.56 15.25 11.99 15.25 17.99s-9.66 15.25-16.31 16.67c-19.44 3.2-39.06 5.15-58.75 5.84-8.69.61-17.48-.71-26.27-.76-12.12-1.11-23.02 7.39-24.9 19.41-2.12 12.38 5.11 24.45 17.02 28.41 29.22 11.79 59.82 14.53 91.07 14.18a40.7 40.7 0 0 1 24.5 6.35 39.2 39.2 0 0 1 11.43 22.87c1.58 9.61-4.92 18.68-14.53 20.27l-.41.06a308 308 0 0 1-54.53 5.69c-25.11 0-50.16-3.1-75.26-4.68-19.77-1.27-39.59-3.2-59.41-3.1-54.89.25-109.77 2.13-164.71 1.83-17.18 0-34.35-5.08-51.53-7.83-5.9-.97-11.79-1.93-17.63-3.15-12.81-2.8-26.43-3.91-37.91-9.4-7-4.69-11.45-12.33-12.1-20.73-1.17-58.14-1.27-116.28-.92-174.41 0-21.14 3.1-42.28 3.71-63.42s-7.88-30.49-29.93-32.37c-12.2-1.12-24.34-2.34-36.59-2.9-7.39-1.05-14.24 4.09-15.29 11.48-.19 1.35-.18 2.72.04 4.07 1.78 38.17 4.12 76.23 6.56 114.55.86 12.86 2.59 25.66 3.96 38.47 1.98 18.04-7.01 30.49-21.75 38.32-8.16 3.65-12.89 12.3-11.54 21.14.18 7.85-.08 15.71-.76 23.53-1.17 17.02-7.42 22.87-24.8 22.16-72.88-3-145.75-6.81-218.53-9.2-36.13-1.17-72.11-9.4-108.5-.66-11.54 2.8-19.31-4.47-21.65-16.26-1.42-7.17-2.29-14.48-3.3-21.19-1.58-.91-2.29-1.78-3.1-1.83-34.3-2.39-38.52-6.61-38.32-41.11.46-72.42 1.47-144.89 1.73-217.31 0-17.48-1.73-35.01-3.1-52.5-1.22-16.26 3.66-23.22 19.67-25.41 41.11-6 82.23-12.1 123.39-17.38 11.33-1.42 15.55-5.64 12.96-16.77-1.02-4.47-1.12-9.15-1.78-13.72-2.29-16.62-11.43-25-27.9-23.89-29.48 1.88-58.85 5.08-88.32 6.5-9.92 1-19.91-.96-28.71-5.64a29.87 29.87 0 0 1-10.16-23.02c0-5.08 9.76-12.4 16.06-13.57 23.53-4.37 47.52-6.5 71.15-9.61 15.25-1.98 31.1-3.76 46.55-6.25s23.89-11.54 23.68-27.34c-.46-38.27-1.58-76.48-2.34-114.75 0-7.83 1.78-16.06 0-23.38-3.16-8.59-7.16-16.84-11.94-24.65-7.37 5.59-18.8 9.76-21.19 16.97-5.08 15.25-5.84 32.37-7.72 48.79-.92 8.23.31 16.67-.56 24.9-2.29 20.94-14.79 35.07-35.57 38.27-22.77 3.46-45.74 5.95-68.81 7.67-18.24 1.37-29.88-11.59-26.99-29.58 8.54-53.77 18.8-107.28 26.02-161.2 5.08-37.86 7.42-76.23 9.15-114.45 1.42-31.71 10.98-45.23 42.43-48.33 21.59-2.06 43.3-2.47 64.95-1.22 22.46 1.17 32.12 16.06 28 38.01a6227 6227 0 0 0-18.24 102.2c-3.25 19.01 8.18 30.49 27.7 29.83 66.07-1.98 131.83-4.01 197.74-5.08 15.69.02 31.27 2.58 46.14 7.57 7.22 2.34 16.21 12.04 16.57 18.85s-7.72 16.77-14.69 20.33a104.4 104.4 0 0 1-63.47 8.59 283.4 283.4 0 0 0-39.89-3.1c-12.76 0-19.01 7.32-19.01 20.33 0 44.26 1.47 88.58 0 132.79-1.17 34.25 12.6 42.84 47.82 40.66 17.02-1.12 33.95-3.3 50.82-3.66 25.82-1.17 28.71.41 52.85 19.57ZM1470.4 896.89c33.19-4.47 64.74-8.39 96.15-13.57 2.8-.46 6.56-9.05 6.1-13.52-2.24-22.41-5.74-44.67-8.79-67.03-7.32-53.36-14.38-106.72-21.95-160.03-2.74-19.46-6.61-38.78-10.16-58.95l-229.86 32.42c13.57 99.3 27.09 198.2 40.66 299.18l53.67-7.83 74.2-10.67Zm228.69-406.56a370 370 0 0 1-40.66 10.52c-26.73 3.86-53.77 5.69-80.55 9.25a61.1 61.1 0 0 0-23.02 8.13c-7.72 4.62-9 21.19-2.34 23.48 14.48 5.08 16.31 16.67 17.02 28.71.61 10.16 5.08 12.96 14.74 13.01 31.36 0 62.66 1.32 94.02 1.83 23.33.41 33.54 13.16 28.66 35.93-1.84 7.57-2.81 15.33-2.9 23.12.17 4.39 2.44 8.44 6.1 10.88 2.74 1.12 8.74-1.93 11.23-5.08 24.65-29.83 48.63-60.27 73.33-90.05 12.7-15.25 26.48-29.83 40.66-45.99a207 207 0 0 0-31.46-1.98c-28.31 2.39-55.9 8.03-83.45-7.57-9.2-4.98-20.43-4.93-21.19-14.23l-.2.05Zm-116.02 175.23c22.26-1.68 30.49 13.42 36.79 28.87 5.08 11.64 6.15 24.8 10.93 36.49 14.33 34.86 6.05 64.64-17.94 91.98a25.05 25.05 0 0 0-5.59 16.82c1.27 16.57 4.27 32.93 6.56 49.4 2.9 20.33-2.03 26.99-22.26 29.93-5.39.76-10.77 1.88-16.11 2.85l.41 3.46h67.29c4.51-100.08 9.03-200.03 13.57-299.84l-79.63-3.76c2.39 16.16 4.27 29.73 6.2 43.76l-.2.05Zm373.78 228.69c-30.49 0-48.38 14.53-48.89 40 0 13.52 7.72 22 19.87 20.99 11.72-.28 23.4-1.52 34.91-3.71 9.54-2.61 18.42-7.2 26.07-13.47 9.2-7.57 8.39-18.75 4.78-29.42s-11.94-13.42-21.6-14.28c-4.78-.36-9.91 0-14.94 0l-.2-.1Zm-2.34-107.69c-5.51-.93-11.1-1.18-16.67-.76-8.08 1.88-22 4.07-22.67 7.93-2.29 13.57 0 27.95.97 41.93 0 1.02 3.81 2.44 5.9 2.54 16.47.71 33.13 2.9 49.35 1.22 21.8-2.24 28.92-21.29 18.04-40.66-9.05-16.21-24.09-11.18-34.71-12.25l-.2.05Zm.41-62.46v-.41c4.15.28 8.31.28 12.45 0 12.86-1.83 22.67-7.47 25.41-21.65 2.85-15.86-7.52-28.81-26.48-29.83-14.64-.31-29.28.63-43.76 2.8-4.3.89-8 3.6-10.16 7.42-10.16 20.94-.61 37.2 22.16 39.79 6.61.76 13.72 1.32 20.58 1.98zm-110.03-269.35 5.64-2.64c1.83-38.57 3.91-77.14 5.08-115.72 0-8.74 1.02-21.8-11.28-21.55s-11.08 13.06-10.93 21.85c.66 33.59 1.63 67.23 3.41 100.78.66 5.79 5.54 11.43 8.28 17.18z"
+              ></path>
+              <path
+                d="M2016.56 388.28c-3.15-46.81-5.08-79.43-7.62-111.8-1.58-20.99 7.98-38.67 28.41-43.1 19.18-4.22 38.84-5.79 58.44-4.68 38.62 2.24 77.2 6.45 115.56 11.23 22.38 2.88 44.56 7.12 66.42 12.7 20.73 5.08 28.46 19.36 26.68 40.66-2.29 27.09-4.47 54.28-5.08 81.31.1 13.8 1.8 27.55 5.08 40.96a95.6 95.6 0 0 1-13.92 77.96 35.15 35.15 0 0 1-31 15.25l-63.22.56h-39.13c-24.9 0-49.8.56-74.65.36-10.21-.06-20.41-.89-30.49-2.49-22.67-3.71-34.2-14.33-35.57-37.4-1.12-31.86.1-63.73.1-81.52Zm155.92-44.16h1.93c-.5-10.96-1.95-21.86-4.32-32.58-1.63-5.59-8.59-9.66-13.11-14.38-3.66 5.95-10.16 11.79-10.42 17.84-.81 25.41.3 50.82.71 75.92.25 17.43.81 34.86.51 52.29 0 9.86 1.93 18.85 12.4 19.87s11.28-9.76 11.33-16.97c0-10.98-3.15-21.95-2.9-32.88.61-23.12 2.49-46.14 3.86-68.86v-.25ZM1916.65 69.34c29.37 1.32 58.75 2.69 88.12 3.91 5.08.38 10.19.24 15.25-.41 12.35-1.83 20.63-7.22 18.35-21.85a81 81 0 0 1 0-15.25c1.22-25.41 6.71-32.12 31.61-33.64C2096.2.52 2122.53.52 2148.8.68c13.92 0 21.45 10.16 19.36 24.39-5.89 39.74-2.85 44.21 36.18 52.19 5.06.35 10.07 1.13 14.99 2.34 5.34 2.13 13.98 5.95 14.08 9.3.25 6.15-3.3 16.26-7.83 17.94a128 128 0 0 1-42.59 9.35c-14.48 0-16.06 8.18-16.36 18.09-.97 37.3-10.16 46.6-47.57 47.97-17.28.66-34.46 4.01-51.73 4.68-25.77 1.07-32.22-6.66-29.07-32.17 2.59-21.04-8.28-31.86-29.58-31.15-24.75.76-49.55.76-74.35 0-22.06-.56-35.22 11.79-33.95 33.59 0 4.12 1.22 8.23 1.63 12.35 2.24 20.99-9.1 35.27-29.98 36.79-26.07 1.93-52.14 3.3-78.26 4.62-12.3.66-19.36-9.05-19.21-23.28s-.61-28.36-1.63-42.43c-.66-9.3-6.71-14.13-15.25-17.33-16.87-6.25-33.59-13.01-49.85-20.68-5.39-2.54-13.52-9.35-12.81-12.55a34.96 34.96 0 0 1 12.65-19.21c5.49-3.96 14.03-3.56 21.14-5.39s14.18-4.17 21.34-5.89c11.49-2.8 16.11-10.16 17.33-21.65 2.8-26.12 13.06-34.46 40.1-36.23 19.31-1.32 38.57-3.3 57.78-5.79 21.9-2.8 29.88 4.57 27.09 25.92-.8 6.86-1.03 13.78-.71 20.68.71 20.94 4.07 23.99 24.9 22.21ZM1419.53 832.7c-29.07-1.12-57.83-12.5-76.69-42.69a41.1 41.1 0 0 1-5.64-12.35c-7.06-31.05-9-62 2.59-92.59 9.35-24.65 27.9-30.19 50.36-15.91 6.35 3 13.31 4.46 20.33 4.27 5.39.36 10.93-2.19 16.36-2.13 13.72 0 21.29-6.86 27.34-18.65 10.57-20.73 28.56-23.07 44.42-6.3a98.3 98.3 0 0 1 14.89 19.82c8.39 15.25 15.91 30.85 23.53 46.45 10.16 20.63 1.07 60.48-17.18 81.31-25.56 28.71-58.55 38.32-100.32 38.78ZM1533.57 858.62c-.89 11.04-10.32 19.42-21.39 19.01-10.59-.97-18.47-10.22-17.74-20.84.31-10.16 8.94-20.33 17.28-20.33 11.89.69 21.33 10.26 21.85 22.16M1469.54 869.85c-.89 11.04-10.32 19.42-21.39 19.01-10.59-.97-18.47-10.22-17.74-20.84.31-10.16 8.94-20.33 17.33-20.33 11.87.72 21.28 10.28 21.8 22.16M1407.54 879.66c-.89 11.04-10.32 19.42-21.39 19.01-10.59-.97-18.47-10.22-17.74-20.84.31-10.16 8.94-20.33 17.33-20.33 11.87.72 21.28 10.28 21.8 22.16"
+              ></path>
+            </g>
+          </svg>
+        </a>
+        <div class="icons">
+          <div class="search-bar">
+            <div class="search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input type="text" class="search-bar-input search-bar-input-hidden" placeholder="我想找找...?">
+            <div class="xmark-icon xmark-icon-hidden">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <div class="icon"><i class="fa-regular fa-bell"></i></div>
+          <div class="login" id="login">
+            <span><i class="fa-regular fa-user"></i></span>
+            <span>登入</span>
+            <span><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+      </div>
+      <Sidebar />
+
+      <div class="aa">
+        <div class="card1">
+          <!-- first swiper -->
+          <div class="swiper first-swiper-container">
+            <div class="swiper-wrapper first-swiper-wrapper" id="">
+              <div class="swiper-slide first-swiper-slide">
+                <a href="#">
+                  <img src="@/assets/img/login-homepage/開拓嘉年華.jpeg" alt="">
+                  <p>2023 高速領域-開拓嘉年華 </p>
+                </a>
+              </div>
+              <div class="swiper-slide first-swiper-slide">
+                <a href="#">
+                  <img src="@/assets/img/login-homepage/三周年.jpg" alt="">
+                  <p>貓罐子三週年</p>
+                </a>
+              </div>
+              <div class="swiper-slide first-swiper-slide">
+                <a href="#">
+                  <img src="@/assets/img/login-homepage/全新英雄榜.png" alt="">
+                  <p>全新英雄榜登場</p>
+                </a>
+              </div>
+              <div class="swiper-slide first-swiper-slide">
+                <a href="#">
+                  <img src="@/assets/img/login-homepage/新手教學.png" alt="">
+                  <p>V2 初來乍到 新手教學</p>
+                </a>
+              </div>
+              <div class="swiper-slide first-swiper-slide">
+                <a href="#">
+                  <img src="@/assets/img/login-homepage/社群文章教學.png" alt="">
+                  <p>貓罐子 社群文章 教學</p>
+                </a>
+              </div>
+              <div class="swiper-slide first-swiper-slide">
+                <a href="#">
+                  <img src="@/assets/img/login-homepage/常見效果文與中文對照表.jpg" alt="">
+                  <p>常見效果文與中文對照表</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- first swiper -->
+        </div>
+        <h2 class="title">
+          每日卡
+          <a href="#" class="title-a">
+            <svg
+              data-v-0ed588ef=""
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+              class="size-5 stroke-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              ></path>
+            </svg>
+            <span data-v-0ed588ef="" class="text">回顧歷史紀錄</span>
+          </a>
+        </h2>
+        <div class="card2">
+          <h2>プレミアムブースター リコリス・リコイル</h2>
+          <span class="card2-top-span">▼2024/11/15（金）発売</span>
+
+          <!-- second swiper -->
+          <div class="swiper second-swiper-container">
+            <div class="swiper-wrapper second-swiper-wrapper">
+              <div class="swiper-slide second-swiper-slide">
+                <a href="#" data-fancybox="card-list" data-src="./src/assets/img/login-homepage/default-card/20241114_yt01.png" data-caption="ブースターパック 「Re:ゼロから始める異世界生活」Vol.3 - ▼2024/11/22（金）発売" >
+                  <img src="@/assets/img/login-homepage/default-card/20241114_yt01.png" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide second-swiper-slide">
+                <a href="#" data-fancybox="card-list" data-src="./src/assets/img/login-homepage/default-card/20241114_yt02.png" data-caption="ブースターパック 「Re:ゼロから始める異世界生活」Vol.3 - ▼2024/11/22（金）発売" >
+                  <img src="@/assets/img/login-homepage/default-card/20241114_yt02.png" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide second-swiper-slide">
+                <a href="#" data-fancybox="card-list" data-src="./src/assets/img/login-homepage/default-card/20241114_yt03.png" data-caption="ブースターパック 「Re:ゼロから始める異世界生活」Vol.3 - ▼2024/11/22（金）発売" >
+                  <img src="@/assets/img/login-homepage/default-card/20241114_yt03.png" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide second-swiper-slide">
+                <a href="#" data-fancybox="card-list" data-src="./src/assets/img/login-homepage/default-card/20241114_yt04.png" data-caption="ブースターパック 「Re:ゼロから始める異世界生活」Vol.3 - ▼2024/11/22（金）発売" >
+                  <img src="@/assets/img/login-homepage/default-card/20241114_yt04.png" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide second-swiper-slide">
+                <a href="#" data-fancybox="card-list" data-src="./src/assets/img/login-homepage/default-card/20241114_yt05.png" data-caption="プレミアムブースター リコリス・リコイル - ▼2024/11/15（金）発売" >
+                  <img src="@/assets/img/login-homepage/default-card/20241114_yt05.png" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide second-swiper-slide">
+                <a href="#" data-fancybox="card-list" data-src="./src/assets/img/login-homepage/default-card/20241114_yt06.png" data-caption="プレミアムブースター リコリス・リコイル - ▼2024/11/15（金）発売" >
+                  <img src="@/assets/img/login-homepage/default-card/20241114_yt06.png" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide second-swiper-slide">
+                <a href="#" data-fancybox="card-list" data-src="./src/assets/img/login-homepage/default-card/20241114_yt07.png" data-caption="プレミアムブースター リコリス・リコイル - ▼2024/11/15（金）発売" >
+                  <img src="@/assets/img/login-homepage/default-card/20241114_yt07.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- second swiper -->
+
+          
+          <span class="card2-bottom-span">2024-11-14</span>
+        </div>
+        <h2 class="title">發燒影片</h2>
+        <div class="card3">
+          <!-- third swiper -->
+          <div class="swiper third-swiper-container">
+            <div class="swiper-wrapper third-swiper-wrapper">
+              <div class="swiper-slide third-swiper-slide">
+                <a href="#">
+                  <div class="third-swiper-slide-content">
+                    <div class="third-swiper-slide-content-img">
+                      <img src="@/assets/img/login-homepage/video-img/bottleneko v2.1.jpg" alt="">
+                    </div>
+                    <div class="third-swiper-slide-content-info" >
+                      <h2>貓罐子 v2.1 網站功能展示</h2>
+                      <div class="third-swiper-slide-content-info-text">
+                        <img src="@/assets/img/login-homepage/video-img/管理員LOGO.png" alt="">
+                        <div class="third-swiper-slide-content-info-text-box">
+                          <p>貓罐子管理員</p>
+                          <p>2023-08-31</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide third-swiper-slide">
+                <a href="#">
+                  <div class="third-swiper-slide-content">
+                    <div class="third-swiper-slide-content-img">
+                      <img src="@/assets/img/login-homepage/video-img/感謝祭.jpg" alt="">
+                    </div>
+                    <div class="third-swiper-slide-content-info" >
+                      <h2>貓罐子 二週年感謝祭</h2>
+                      <div class="third-swiper-slide-content-info-text">
+                        <img src="@/assets/img/login-homepage/video-img/管理員LOGO.png" alt="">
+                        <div class="third-swiper-slide-content-info-text-box">
+                          <p>貓罐子管理員</p>
+                          <p>2023-08-31</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide third-swiper-slide">
+                <a href="#">
+                  <div class="third-swiper-slide-content">
+                    <div class="third-swiper-slide-content-img">
+                      <img src="@/assets/img/login-homepage/video-img/スパイファミリーの画像イメージ.jpg" alt="">
+                    </div>
+                    <div class="third-swiper-slide-content-info" >
+                      <h2>【WS】【弦暇之諭】 Weiß Schwarz雜談#62 スパイファミリー SPY×FAMILY 間諜家家酒牌組分享</h2>
+                      <div class="third-swiper-slide-content-info-text">
+                        <img src="@/assets/img/login-homepage/video-img/管理員LOGO.png" alt="">
+                        <div class="third-swiper-slide-content-info-text-box">
+                          <p>高速領域</p>
+                          <p>2023-08-31</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide third-swiper-slide">
+                <a href="#">
+                  <div class="third-swiper-slide-content">
+                    <div class="third-swiper-slide-content-img">
+                      <img src="@/assets/img/login-homepage/video-img/bottleneko v2.1.jpg" alt="">
+                    </div>
+                    <div class="third-swiper-slide-content-info" >
+                      <h2>【WS】【弦暇之諭】 Weiß Schwarz雜談#61 ウマ娘 プリティーダービー 賽馬娘牌組分享</h2>
+                      <div class="third-swiper-slide-content-info-text">
+                        <img src="@/assets/img/login-homepage/video-img/管理員LOGO.png" alt="">
+                        <div class="third-swiper-slide-content-info-text-box">
+                          <p>高速領域</p>
+                          <p>2023-08-31</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide third-swiper-slide">
+                <a href="#">
+                  <div class="third-swiper-slide-content">
+                    <div class="third-swiper-slide-content-img">
+                      <img src="@/assets/img/login-homepage/video-img/リコリスの画像ファイル.jpg" alt="">
+                    </div>
+                    <div class="third-swiper-slide-content-info" >
+                      <h2>【WS】【弦暇之諭】 Weiß Schwarz雜談#54 リコリス・リコイル Lycoris Recoil 莉可麗絲牌組分享</h2>
+                      <div class="third-swiper-slide-content-info-text">
+                        <img src="@/assets/img/login-homepage/video-img/管理員LOGO.png" alt="">
+                        <div class="third-swiper-slide-content-info-text-box">
+                          <p>高速領域</p>
+                          <p>2023-08-31</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide third-swiper-slide">
+                <a href="#">
+                  <div class="third-swiper-slide-content">
+                    <div class="third-swiper-slide-content-img">
+                      <img src="@/assets/img/login-homepage/video-img/判定チュートリアル.jpg" alt="">
+                    </div>
+                    <div class="third-swiper-slide-content-info" >
+                      <h2>【Weiβ Schwarz 教學】獲得/給予判定標誌「CX的效果可不只有CX可以用」#38</h2>
+                      <div class="third-swiper-slide-content-info-text">
+                        <img src="@/assets/img/login-homepage/video-img/管理員LOGO.png" alt="">
+                        <div class="third-swiper-slide-content-info-text-box">
+                          <p>くろう-KUROU-</p>
+                          <p>2023-08-31</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide third-swiper-slide">
+                <a href="#">
+                  <div class="third-swiper-slide-content">
+                    <div class="third-swiper-slide-content-img">
+                      <img src="@/assets/img/login-homepage/video-img/遊び方.jpg" alt="">
+                    </div>
+                    <div class="third-swiper-slide-content-info" >
+                      <h2>【Weiβ Schwarz 教學】(1) 認識卡片/牌組構成規則｜WS教學#1</h2>
+                      <div class="third-swiper-slide-content-info-text">
+                        <img src="@/assets/img/login-homepage/video-img/管理員LOGO.png" alt="">
+                        <div class="third-swiper-slide-content-info-text-box">
+                          <p>くろう-KUROU-</p>
+                          <p>2023-08-31</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide third-swiper-slide">
+                <a href="#">
+                  <div class="third-swiper-slide-content">
+                    <div class="third-swiper-slide-content-img">
+                      <img src="@/assets/img/login-homepage/video-img/カードセットメイカーアプリ画像.jpg" alt="">
+                    </div>
+                    <div class="third-swiper-slide-content-info" >
+                      <h2>【Weiβ Schwarz 教學】貓罐子組牌器「彩蛋居然是牌組卡表大放送!?」｜WS教學#12</h2>
+                      <div class="third-swiper-slide-content-info-text">
+                        <img src="@/assets/img/login-homepage/video-img/管理員LOGO.png" alt="">
+                        <div class="third-swiper-slide-content-info-text-box">
+                          <p>くろう-KUROU-</p>
+                          <p>2023-08-31</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- third swiper -->
+        </div>
+
+        <h2 class="title">
+          <a href="#" class="title-a2">BCF2024全国決勝大会</a>
+          <a href="#" class="title-a3">
+            閱讀更多 
+            <svg data-v-0ed588ef="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </a>
+        </h2>
+        <section class="show-card">
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+      </section>
+
+
+        <h2 class="title">
+          <a href="#" class="title-a2">2023 高速領域-開拓嘉年華</a>
+          <a href="#" class="title-a3">
+            閱讀更多 
+            <svg data-v-0ed588ef="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </a>
+        </h2> 
+        <section class="show-card">
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+      </section>
+
+        <h2 class="title">
+          <a href="#" class="title-a2">最新商品</a>
+          <a href="#" class="title-a3">
+            閱讀更多 
+            <svg data-v-0ed588ef="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </a>
+        </h2> 
+        <section class="show-card">
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+      </section>
+
+        <h2 class="title">
+          <a href="#" class="title-a2">第一線最新文章</a>
+          <a href="#" class="title-a3">
+            閱讀更多 
+            <svg data-v-0ed588ef="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </a>
+        </h2>
+        <section class="show-card">
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+      </section>
+
+        <h2 class="title">
+          <a href="#" class="title-a2">新系列來啦！</a>
+          <a href="#" class="title-a3">
+            閱讀更多 
+            <svg data-v-0ed588ef="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </a>
+        </h2>
+        <section class="show-card">
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+      </section>
+
+        <h2 class="title">
+          <a href="#" class="title-a2">歡迎新創作者加入！</a>
+        </h2>
+        <section></section>
+
+        <h2 class="title">
+          <a href="#" class="title-a2">WGP2023 全国決勝大会</a>
+          <a href="#" class="title-a3">
+            閱讀更多 
+            <svg data-v-0ed588ef="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </a>
+        </h2>
+        <section class="show-card">
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+      </section>
+
+        <h2 class="title">
+          <a href="#" class="title-a2">タイトルカップ in WGP2023</a>
+          <a href="#" class="title-a3">
+            閱讀更多 
+            <svg data-v-0ed588ef="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </a>
+        </h2>
+        <section class="show-card">
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+      </section>
+
+        <h2 class="title">
+          <a href="#" class="title-a2">トリオサバイバル in WGP2023</a>
+          <a href="#" class="title-a3">
+            閱讀更多 
+            <svg data-v-0ed588ef="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </a>
+        </h2>
+        <section class="show-card">
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+      </section>
+
+        <h2 class="title">
+          <a href="#" class="title-a2">ネオスタンダード in WGP2023</a>
+          <a href="#" class="title-a3">
+            閱讀更多 
+            <svg data-v-0ed588ef="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </a>
+        </h2>
+        <section class="show-card">
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+      </section>
+
+        <h2 class="title">
+          <a href="#" class="title-a2">"日本WS官方" 專欄</a>
+          <a href="#" class="title-a3">
+            閱讀更多 
+            <svg data-v-0ed588ef="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </a>
+        </h2>
+        <section class="show-card">
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+                  <div>
+                      <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+                  </div>
+                  <div class="card-text">
+                      <div class="flex">
+                          <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                              <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                              </path>
+                              <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                              </path>
+                          </svg>
+                          <p class="color-a1">OSK</p>
+                      </div>
+                      <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                      <p class="color-a1">2023-12-08</p>
+                  </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+          <a href="#" class="url transition-colors">
+              <div>
+                  <img src="https://jasonxddd.me:9000/series-cover/osk_176×176.jpg" alt="">
+              </div>
+              <div class="card-text">
+                  <div class="flex">
+                      <svg data-v-09f2b439="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="icon-size flex-none color-a1">
+                          <path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z">
+                          </path>
+                          <path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z">
+                          </path>
+                      </svg>
+                      <p class="color-a1">OSK</p>
+                  </div>
+                  <p class="font-size20 color-white padding-bottom" >【我推的孩子】</p>
+                  <p class="color-a1">2023-12-08</p>
+              </div>
+          </a>
+      </section>
+
+        <footer class="hero-member-footer">
+          <div class="work-shop-footer">
+            <div class="work-shop-footer-flexbox">
+              <div class="work-shop-footer-flexbox-left">
+                <ul class="work-shop-footer-flexbox-left-item">
+                  <li class="work-shop-footer-flexbox-left-item-title">簡介</li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      關於我們
+                    </a>
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      與我聯絡
+                    </a>
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      Weiβ Schwarz
+                    </a>
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      V2新版介紹
+                    </a>
+                  </li>
+                </ul>
+                <ul class="work-shop-footer-flexbox-left-item">
+                  <li class="work-shop-footer-flexbox-left-item-title">資源</li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      Bushi DeckLog
+                    </a>
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      Bushi DeckLog EN
+                    </a>
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      遊々亭價格
+                    </a>
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      基本規則
+                    </a>
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      禁卡表
+                    </a>
+                  </li>
+                </ul>
+                <ul class="work-shop-footer-flexbox-left-item">
+                  <li class="work-shop-footer-flexbox-left-item-title">
+                    常用連結
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      卡片問答集
+                    </a>
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      我的專頁
+                    </a>
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      偏好設定
+                    </a>
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text text-color-red"
+                      id="footer-logout"
+                    >
+                      登出帳號
+                    </a>
+                  </li>
+                  <li class="work-shop-footer-flexbox-left-item-link">
+                    <a
+                      href="#"
+                      class="work-shop-footer-flexbox-left-item-link-text"
+                    >
+                      英雄榜
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="work-shop-footer-flexbox-right">
+                <div class="work-shop-footer-flexbox-right-group">
+                  <a class="work-shop-footer-flexbox-right-item" href="#">
+                    <span class="work-shop-footer-flexbox-right-item-icon">
+                      <i class="fa-solid fa-gift"></i>
+                    </span>
+                    <span class="work-shop-footer-flexbox-right-item-text"
+                      >用一杯咖啡讓工程師罐罐休息一下</span
+                    >
+                  </a>
+                  <div class="work-shop-footer-flexbox-right-icon-list">
+                    <a href="#">
+                      <i class="fa-brands fa-google-play"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-brands fa-apple"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-solid fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="work-shop-footer-hr" />
+            <div class="work-shop-footer-copyright">
+              <ul class="work-shop-footer-copyright-left">
+                <li class="work-shop-footer-copyright-left-item">
+                  <a href="#">隱私權政策 </a>
+                </li>
+                <li class="work-shop-footer-copyright-left-item">
+                  <a href="#">服務條款</a>
+                </li>
+                <li class="work-shop-footer-copyright-left-item">
+                  <a href="#">商業合作</a>
+                </li>
+              </ul>
+              <div class="work-shop-footer-copyright-right">
+                <span>卡片資料來源 Weiβ Schwarz.</span>
+                <span>Copyright @ 2023 BottleNeko</span>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <!-- fix -->
+      <!-- fix -->
+    </div>
+</template>
+
+<style scoped>
+@import "@/assets/css/login-homepage/Login Homepage.css";
+</style>

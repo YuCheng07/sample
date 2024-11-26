@@ -1,0 +1,83 @@
+@media screen and (width < 1200px) {
+  .work-shop-main-content-container {
+    margin: 0px;
+    border-radius: 0px;
+  }
+
+  .work-shop-header {
+    padding: 0 16px;
+  }
+
+  .work-shop-main {
+    padding: 0 16px;
+  }
+
+  .user-nav {
+    flex-wrap: wrap;
+  }
+
+  .user-info-box {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .user-info-box-left-login-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .user-info-box-right {
+    margin-left: auto;
+  }
+
+  .hero-member-box {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .hero-member-box-right {
+    margin-left: auto;
+  }
+
+  .hero-member-box-left-login-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .work-shop-title h2 {
+    font-size: 20px;
+  }
+
+  .work-shop-title p {
+    font-size: 12px;
+  }
+
+  .work-shop-group {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px 0px;
+  }
+
+  .banner {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    gap: 4px;
+  }
+
+  .banner h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .banner p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (width < 768px) {
+  .work-shop-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
