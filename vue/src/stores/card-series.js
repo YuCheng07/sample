@@ -81,6 +81,7 @@ export const useCardSeriesStore = defineStore("card-series", () => {
   const saveLastViewSeries = () => {
     if (currentSeriesData.value || seriesCardList.value) {
       localStorage.setItem("lastViewSeriesId", currentSeriesData.value.id);
+      lastViewSeriesId.value = currentSeriesData.value.id;
     }
   };
 
@@ -104,5 +105,6 @@ export const useCardSeriesStore = defineStore("card-series", () => {
     getCardSeriesCompleteInfo,
     saveLastViewSeries,
     getLastViewSeries,
+    lastViewSeriesId
   };
 });

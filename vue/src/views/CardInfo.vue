@@ -210,6 +210,7 @@
 </template>
 
 <style scoped>
+@import "../assets/base.css";
 *, :after, :before {
     border: 0 solid #e5e7eb;
     box-sizing: border-box;

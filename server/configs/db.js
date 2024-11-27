@@ -7,4 +7,4 @@ const db = mysql.createPool({
   database: "project-test",
 })
 
-export default db
+module.exports = db

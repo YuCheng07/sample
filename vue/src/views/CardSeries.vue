@@ -1,13 +1,24 @@
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount, onBeforeMount } from "vue";
-import { useCardSeriesStore } from "@/stores/card-series";
+import { ref, computed, onMounted, onBeforeUnmount, watch } from "vue";
 import { storeToRefs } from "pinia";
+import { useCardSeriesStore } from "@/stores/card-series";
+import { useDeckMakeStore } from "@/stores/deck-make";
 
 const cardSeriesStore = useCardSeriesStore();
 
-const { currentSeriesData, serieslastReleaseTime, seriesCode, seriesCardList } =
-  storeToRefs(cardSeriesStore);
-  
+const { currentSeriesData, serieslastReleaseTime, seriesCode, seriesCardList } = storeToRefs(cardSeriesStore);
+const getLastViewSeries = cardSeriesStore.getLastViewSeries
+
+const deckMakeStore = useDeckMakeStore();
+
+const { selectedCards, countDeck, editType } = storeToRefs(deckMakeStore);
+const clearSelectedCards = deckMakeStore.clearSelectedCards;
+const getLastDeckEdit = deckMakeStore.getLastDeckEdit;
+const removeCard = deckMakeStore.removeCard;
+const changeTypeToAdd = deckMakeStore.changeTypeToAdd;
+const changeTypeToDelete = deckMakeStore.changeTypeToDelete;
+const checkTypeAndRunFunction = deckMakeStore.checkTypeAndRunFunction
+
   const currentSidebar = ref('');
   const sidebarFilterWidth = ref(490);
   const sidebarDeckWidth = ref(490);
@@ -75,7 +86,8 @@ const { currentSeriesData, serieslastReleaseTime, seriesCode, seriesCardList } =
   // Lifecycle hooks
   onMounted(async() => {
     window.addEventListener('resize', updateScreenSize);
-    await cardSeriesStore.getLastViewSeries();
+    await getLastViewSeries();
+    getLastDeckEdit();
   });
   
   onBeforeUnmount(() => {
@@ -345,10 +357,10 @@ const { currentSeriesData, serieslastReleaseTime, seriesCode, seriesCardList } =
         <header class="sidebar-header">
           <div>
             <p>牌組製作</p>
-            <p>已選擇 0 張卡片，總價 ¥0</p>
+            <p>已選擇 {{ selectedCards.length }} 張卡片，總價 ¥{{ countDeck }}</p>
           </div>
           <div>
-            <button class="icon del-btn"><i class="fa-solid fa-trash"></i></button>
+            <button class="icon del-btn" @click="clearSelectedCards" ><i class="fa-solid fa-trash"></i></button>
             <button @click="closeSidebar" class="icon xmark-btn"><i class="fa-solid fa-xmark"></i></button>
           </div>
         </header>
@@ -378,37 +390,18 @@ const { currentSeriesData, serieslastReleaseTime, seriesCode, seriesCardList } =
           <div class="sidebar-deck-control">
             <button class="cash"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"></path></svg></button>
             <span class="divder font-mono flex-none text-zinc-500/50"> | </span>
-            <button class="plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class=""><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path></svg></button>
-            <button class="minus"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class=""><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"></path></svg></button>
+            <button class="plus" @click="changeTypeToAdd" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class=""><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path></svg></button>
+            <button class="minus" @click="changeTypeToDelete"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class=""><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"></path></svg></button>
           </div>
           <div class="card-content">
             <h3>角色 - 5</h3>
             <div class="card-choiced">
               <div class="row">
-                <div class="col-choice">
+                <div class="col-choice" v-for="(card, index) in selectedCards" :key="index" @click="checkTypeAndRunFunction(card, index)" >
                   <div class="card-image">
                     <img src="https://jasonxddd.me:7001/imgproxy/4nZhC0JVu4aRvo6ml6VI37hURt9V19vRRN5Wo54yrqU/g:no/el:1/bG9jYWw6Ly8vL0xSQ19XMTA1XzAwMS5wbmc.png">
                   </div>
-                </div>
-                <div class="col-choice">
-                  <div class="card-image">
-                    <img src="https://jasonxddd.me:7001/imgproxy/4nZhC0JVu4aRvo6ml6VI37hURt9V19vRRN5Wo54yrqU/g:no/el:1/bG9jYWw6Ly8vL0xSQ19XMTA1XzAwMS5wbmc.png">
-                  </div>
-                </div>
-                <div class="col-choice">
-                  <div class="card-image">
-                    <img src="https://jasonxddd.me:7001/imgproxy/4nZhC0JVu4aRvo6ml6VI37hURt9V19vRRN5Wo54yrqU/g:no/el:1/bG9jYWw6Ly8vL0xSQ19XMTA1XzAwMS5wbmc.png">
-                  </div>
-                </div>
-                <div class="col-choice">
-                  <div class="card-image">
-                    <img src="https://jasonxddd.me:7001/imgproxy/4nZhC0JVu4aRvo6ml6VI37hURt9V19vRRN5Wo54yrqU/g:no/el:1/bG9jYWw6Ly8vL0xSQ19XMTA1XzAwMS5wbmc.png">
-                  </div>
-                </div>
-                <div class="col-choice">
-                  <div class="card-image">
-                    <img src="https://jasonxddd.me:7001/imgproxy/4nZhC0JVu4aRvo6ml6VI37hURt9V19vRRN5Wo54yrqU/g:no/el:1/bG9jYWw6Ly8vL0xSQ19XMTA1XzAwMS5wbmc.png">
-                  </div>
+                  {{ card.title }}
                 </div>
               </div>
             </div>
@@ -451,7 +444,7 @@ const { currentSeriesData, serieslastReleaseTime, seriesCode, seriesCardList } =
     
     
         <footer class="sidebar-footer">
-          <button>
+          <button class="sidebar-footer-active">
             <span>下一步<svg data-v-49703284="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path></svg></span>
           </button>
         </footer>
@@ -510,10 +503,11 @@ const { currentSeriesData, serieslastReleaseTime, seriesCode, seriesCardList } =
           </div>
         </header>
         <button @click="toggleSidebar('open-filter')" class="toggle-filter">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155E75" aria-hidden="true" data-slot="icon" ><path fill-rule="evenodd" d="M3.792 2.938A49.069 49.069 0 0 1 12 2.25c2.797 0 5.54.236 8.209.688a1.857 1.857 0 0 1 1.541 1.836v1.044a3 3 0 0 1-.879 2.121l-6.182 6.182a1.5 1.5 0 0 0-.439 1.061v2.927a3 3 0 0 1-1.658 2.684l-1.757.878A.75.75 0 0 1 9.75 21v-5.818a1.5 1.5 0 0 0-.44-1.06L3.13 7.938a3 3 0 0 1-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836Z" clip-rule="evenodd"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155E75" aria-hidden="true" data-slot="icon" ><path fill-rule="evenodd" d="M3.792 2.938A49.069 49.069 0 0 1 12 2.25c2.797 0 5.54.236 8.209.688a1.857 1.857 0 0 1 1.541 1.836v1.044a3 3 0 0 1-.879 2.121l-6.182 6.182a1.5 1.5 0 0 0-.439 1.061v2.927a3 3 0 0 1-1.658 2.684l-1.757.878A.75.75 0 0 1 9.75 21v-5.818a1.5 1.5 0 0 0-.44-1.06L3.13 7.938a3 3 0 0 1-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836Z" clip-rule="evenodd"></path></svg>
         </button>
         <button @click="toggleSidebar('open-deck')" class="toggle-deck">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#C3D7D5" aria-hidden="true" data-slot="icon" ><path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z"></path><path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#C3D7D5" aria-hidden="true" data-slot="icon" ><path d="M16.5 6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7.5a3 3 0 0 0 3 3v-6A4.5 4.5 0 0 1 10.5 6h6Z"></path><path d="M18 7.5a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-7.5a3 3 0 0 1-3-3v-7.5a3 3 0 0 1 3-3H18Z"></path>
+          </svg>
         </button>
         <section class="info-container">
           <img src="https://jasonxddd.me:9000/series-cover/rikoriko.jpg">
@@ -548,7 +542,7 @@ const { currentSeriesData, serieslastReleaseTime, seriesCode, seriesCardList } =
           </div>
           <div v-if="view === 'card-sheet'" class="card-sheet">
             <div class="row">
-              <div class="col-Sheet" v-for="(card, index) in seriesCardList" :key="card.id" @click="addCard(card.id, )">
+              <div class="col-Sheet" v-for="(card, index) in seriesCardList" :key="card.id" @click="deckMakeStore.addCard(card)">
                 <div class="card-image">
                   <img src="https://jasonxddd.me:7001/imgproxy/4nZhC0JVu4aRvo6ml6VI37hURt9V19vRRN5Wo54yrqU/g:no/el:1/bG9jYWw6Ly8vL0xSQ19XMTA1XzAwMS5wbmc.png">
                   <div>

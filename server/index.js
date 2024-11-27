@@ -3,6 +3,7 @@ const app = express();
 const router = express.Router();
 const port = 3000;
 const cors = require('cors');
+const db = require('./configs/db');
 
 app.use(cors());
 

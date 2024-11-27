@@ -301,6 +301,10 @@ input[type="checkbox"] {
   transition-duration: 0.3s;
 }
 
+.toggle-deck-icon {
+  position: relative;
+}
+
 .toggle-deck {
   position: sticky;
   display: flex;
