@@ -11,13 +11,14 @@ const getLastViewSeries = cardSeriesStore.getLastViewSeries
 
 const deckMakeStore = useDeckMakeStore();
 
-const { selectedCards, countDeck, editType } = storeToRefs(deckMakeStore);
+const { selectedCards, countDeck, editType, showCardPrice, sortedDeck, sortedTitle, sortStatus } = storeToRefs(deckMakeStore);
 const clearSelectedCards = deckMakeStore.clearSelectedCards;
 const getLastDeckEdit = deckMakeStore.getLastDeckEdit;
 const removeCard = deckMakeStore.removeCard;
 const changeTypeToAdd = deckMakeStore.changeTypeToAdd;
 const changeTypeToDelete = deckMakeStore.changeTypeToDelete;
 const checkTypeAndRunFunction = deckMakeStore.checkTypeAndRunFunction
+const switchSortMode = deckMakeStore.switchSortMode
 
   const currentSidebar = ref('');
   const sidebarFilterWidth = ref(490);
@@ -88,6 +89,7 @@ const checkTypeAndRunFunction = deckMakeStore.checkTypeAndRunFunction
     window.addEventListener('resize', updateScreenSize);
     await getLastViewSeries();
     getLastDeckEdit();
+    switchSortMode();
   });
   
   onBeforeUnmount(() => {
@@ -388,59 +390,37 @@ const checkTypeAndRunFunction = deckMakeStore.checkTypeAndRunFunction
             </button>
           </div>
           <div class="sidebar-deck-control">
-            <button class="cash"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"></path></svg></button>
+            <button class="cash" @click="showCardPrice = !showCardPrice" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"></path></svg></button>
             <span class="divder font-mono flex-none text-zinc-500/50"> | </span>
-            <button class="plus" @click="changeTypeToAdd" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class=""><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path></svg></button>
-            <button class="minus" @click="changeTypeToDelete"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class=""><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"></path></svg></button>
+            
+            <button id="plus-active" @click="changeTypeToAdd" v-if="editType === 'ADD_CARD'" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class=""><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path></svg></button>
+            <button class="plus" @click="changeTypeToAdd" v-else="editType === 'CHECK_INFO'"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class=""><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path></svg></button>
+
+            <button id="minus-active" @click="changeTypeToDelete" v-if="editType === 'DELETE_CARD'"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class=""><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"></path></svg></button>
+            <button class="minus" @click="changeTypeToDelete" v-else ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" aria-hidden="true" data-slot="icon" class=""><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"></path></svg></button>
+
           </div>
           <div class="card-content">
-            <h3>角色 - 5</h3>
-            <div class="card-choiced">
-              <div class="row">
-                <div class="col-choice" v-for="(card, index) in selectedCards" :key="index" @click="checkTypeAndRunFunction(card, index)" >
-                  <div class="card-image">
-                    <img src="https://jasonxddd.me:7001/imgproxy/4nZhC0JVu4aRvo6ml6VI37hURt9V19vRRN5Wo54yrqU/g:no/el:1/bG9jYWw6Ly8vL0xSQ19XMTA1XzAwMS5wbmc.png">
-                  </div>
-                  {{ card.title }}
-                </div>
-              </div>
-            </div>
-            <h3>名場 - 6</h3>
-            <div class="card-choiced">
-              <div class="row">
-                <div class="col-choice">
-                  <div class="card-image">
-                    <img src="https://jasonxddd.me:7001/imgproxy/JKq9V6OPDBK-LXk3Ylj4q8RTxEbGWoG_i_2FqogzsyM/rt:fill/w:0/h:0/g:no/el:1/f:png/bG9jYWw6Ly8vL0xSQ19XMTA1XzAyOVIucG5n.png">
-                  </div>
-                </div>
-                <div class="col-choice">
-                  <div class="card-image">
-                    <img src="https://jasonxddd.me:7001/imgproxy/JKq9V6OPDBK-LXk3Ylj4q8RTxEbGWoG_i_2FqogzsyM/rt:fill/w:0/h:0/g:no/el:1/f:png/bG9jYWw6Ly8vL0xSQ19XMTA1XzAyOVIucG5n.png">
-                  </div>
-                </div>
-                <div class="col-choice">
-                  <div class="card-image">
-                    <img src="https://jasonxddd.me:7001/imgproxy/JKq9V6OPDBK-LXk3Ylj4q8RTxEbGWoG_i_2FqogzsyM/rt:fill/w:0/h:0/g:no/el:1/f:png/bG9jYWw6Ly8vL0xSQ19XMTA1XzAyOVIucG5n.png">
-                  </div>
-                </div>
-                <div class="col-choice">
-                  <div class="card-image">
-                    <img src="https://jasonxddd.me:7001/imgproxy/JKq9V6OPDBK-LXk3Ylj4q8RTxEbGWoG_i_2FqogzsyM/rt:fill/w:0/h:0/g:no/el:1/f:png/bG9jYWw6Ly8vL0xSQ19XMTA1XzAyOVIucG5n.png">
-                  </div>
-                </div>
-                <div class="col-choice">
-                  <div class="card-image">
-                    <img src="https://jasonxddd.me:7001/imgproxy/JKq9V6OPDBK-LXk3Ylj4q8RTxEbGWoG_i_2FqogzsyM/rt:fill/w:0/h:0/g:no/el:1/f:png/bG9jYWw6Ly8vL0xSQ19XMTA1XzAyOVIucG5n.png">
-                  </div>
-                </div>
-                <div class="col-choice">
-                  <div class="card-image">
-                    <img src="https://jasonxddd.me:7001/imgproxy/JKq9V6OPDBK-LXk3Ylj4q8RTxEbGWoG_i_2FqogzsyM/rt:fill/w:0/h:0/g:no/el:1/f:png/bG9jYWw6Ly8vL0xSQ19XMTA1XzAyOVIucG5n.png">
+            <div class="card-section" v-for="(title, sortedTitleIndex) in sortedTitle" :key="sortedTitleIndex" >
+              <h3>{{ title }} - {{ sortedDeck[sortedTitleIndex].length }}</h3>
+              <div class="card-choiced">
+                <div class="row">
+                  <div class="col-choice" v-for="(card, index) in sortedDeck[sortedTitleIndex]" :key="index" @click="checkTypeAndRunFunction(card, index, sortedTitleIndex)" >
+                    <div class="card-price" v-if="showCardPrice">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="m9 7.5 3 4.5m0 0 3-4.5M12 12v5.25M15 12H9m6 3H9m12-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path></svg>
+                      <span>{{ card.price.number }}</span>
+                      <span>{{ card.rare }}</span>
+                    </div>
+                    <div class="card-image">
+                      <img src="https://jasonxddd.me:7001/imgproxy/4nZhC0JVu4aRvo6ml6VI37hURt9V19vRRN5Wo54yrqU/g:no/el:1/bG9jYWw6Ly8vL0xSQ19XMTA1XzAwMS5wbmc.png">
+                    </div>
+                    <div :class="{'card-count': true,'card-count-white': editType === 'CHECK_INFO', 'card-count-green': editType === 'ADD_CARD', 'card-count-red': editType === 'DELETE_CARD',}">1</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
     
     
         <footer class="sidebar-footer">

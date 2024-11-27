@@ -151,6 +151,11 @@
   z-index: 1;
 }
 
+#plus-active {
+  position: relative;
+  background-color: rgb(22, 163, 74);
+}
+
 .minus {
   position: relative;
 }
@@ -165,6 +170,12 @@
   border-radius: 9999px;
   z-index: 1;
 }
+
+#minus-active {
+  position: relative;
+  background-color: rgb(239, 68, 68);
+}
+
 
 .card-content {
   padding: 10px 15px;
@@ -186,6 +197,15 @@
   box-sizing: border-box;
 }
 
+.card-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: rgba(252, 211, 77, 0.7);
+  font-weight: 700;
+}
+
 .card-image {
   display: flex;
   position: relative;
@@ -198,6 +218,7 @@
 
 .col-choice {
   width:25%;
+  position: relative;
 }
 
 .card-image img {
@@ -205,6 +226,39 @@
   height: auto;
   display: block;
 }
+
+.card-count {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border-radius: 50%;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+.card-count-white {
+  background-color: white;
+  box-shadow: 0 0 20px 0px white;
+  color: black;
+}
+
+.card-count-green {
+  background-color: rgb(22, 163, 74);
+  color: white;
+}
+
+.card-count-red {
+  background-color: rgb(220, 38, 38);
+  color: white;
+}
+
+
+
+
 
 .sidebar-footer {
   height: 87px;
