@@ -6,12 +6,12 @@ const cors = require('cors');
 const db = require('./configs/db');
 const deckMake = require('./routes/deck-make');
 
+
 app.use(cors());
 
 // middleware
 app.use(express.json());
 
-app.use('/api', deckMake);
 
 router.post('/signup', (req, res) => {
   const { email, password } = req.body;
@@ -36,6 +36,7 @@ router.post('/signup', (req, res) => {
 });
 
 app.use('/api', router);
+app.use('/api', deckMake);
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);

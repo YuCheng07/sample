@@ -4,6 +4,7 @@ import router from '../router/index'
 import { storeToRefs } from "pinia";
 import { useCardSeriesStore } from "@/stores/card-series";
 import { useDeckMakeStore } from "@/stores/deck-make";
+import Swal from 'sweetalert2'
 
 const cardSeriesStore = useCardSeriesStore();
 
@@ -21,28 +22,88 @@ const changeTypeToDelete = deckMakeStore.changeTypeToDelete;
 const checkTypeAndRunFunction = deckMakeStore.checkTypeAndRunFunction
 const switchSortMode = deckMakeStore.switchSortMode
 const handleSwitchBtnClick = deckMakeStore.handleSwitchBtnClick
+const sendDeckToDatabase = deckMakeStore.sendDeckToDatabase
 
-  const sidebarSelectedStatus = ref(true)
-  const chooseCoverCard = ref('')
-  const deckName = ref('')
-  const deckDescription = ref('')
-  const settingDeckStatus = ref(false)
-
-  const nextStep = () => {
-    sidebarSelectedStatus.value = false
-    settingDeckStatus.value = true
+const sidebarSelectedStatus = ref(true)
+const chooseCoverCard = ref('')
+const deckName = ref('LL牌組')
+const deckDescription = ref('這是油到滑倒牌組')
+const settingDeckStatus = ref(false)
+const clearDeckAndBacktoFirstStep = async() => {
+  const res = await Swal.fire({
+    icon: 'question',
+    title: '清除牌組',
+    text: '確定要清除牌組嗎?',
+    confirmButtonText: '確定',
+    showCancelButton: true,
+    cancelButtonText: '取消',
+  })
+  if(res.isConfirmed){
+    clearSelectedCards()
+    settingDeckStatus.value = false
+    sidebarSelectedStatus.value = true
   }
-
-  const finalStep = () => {
-    if(deckName.value.trim() != '' && deckDescription.value.trim() != '') {
-      router.push('/carddeck')
+  
+}
+const nextStep = () => {
+  sidebarSelectedStatus.value = false
+  settingDeckStatus.value = true
+}
+const finalStep = async() => {
+  if(deckName.value.trim() != '' && deckDescription.value.trim() != '' && chooseCoverCard.value.trim() != '') {
+    const deckData = {
+      deckName: deckName.value,
+      deckDescription: deckDescription.value,
+      deck: selectedCards.value,
+      deckCover: chooseCoverCard.value
+    }
+    const res = await sendDeckToDatabase(deckData);
+    console.log(res);
+    
+    if(res.status == 200) {        
+      console.log("已傳送給後端存入資料庫");
       settingDeckStatus.value = false
       sidebarSelectedStatus.value = true
-      console.log("完成");
+      deckName.value = ''
+      deckDescription.value = ''
+      chooseCoverCard.value = ''
+      clearSelectedCards()
+      await Swal.fire({
+                icon: 'success',
+                title: '成功',
+                text: '成功創建牌組'
+              })
+      router.push('/carddeck')
+      console.log("完成創建牌組並跳轉");
     }else{
-      console.log("不可跳轉");
+      Swal.fire({
+                icon: 'error',
+                title: '錯誤',
+                text: '創建牌組失敗'
+              })
+    }
+  }else{
+    if(deckName.value.trim() == '') {
+      Swal.fire({
+                  icon: 'error',
+                  title: '錯誤',
+                  text: '需填寫牌組名'
+              })
+    }else if(deckDescription.value.trim() == '') {
+      Swal.fire({
+                  icon: 'error',
+                  title: '錯誤',
+                  text: '需填寫牌組描述'
+              })
+    }else if(chooseCoverCard.value.trim() == '') {
+      Swal.fire({
+                  icon: 'error',
+                  title: '錯誤',
+                  text: '未選擇封面卡'
+              })
     }
   }
+}
 
   const currentSidebar = ref('');
   const sidebarFilterWidth = ref(490);
@@ -386,7 +447,7 @@ const handleSwitchBtnClick = deckMakeStore.handleSwitchBtnClick
             <p>已選擇 {{ selectedCards.length }} 張卡片，總價 ¥{{ countDeck }}</p>
           </div>
           <div>
-            <button class="icon del-btn" @click="clearSelectedCards" ><i class="fa-solid fa-trash"></i></button>
+            <button class="icon del-btn" @click="clearDeckAndBacktoFirstStep" ><i class="fa-solid fa-trash"></i></button>
             <button @click="closeSidebar" class="icon xmark-btn"><i class="fa-solid fa-xmark"></i></button>
           </div>
         </header>
@@ -464,7 +525,7 @@ const handleSwitchBtnClick = deckMakeStore.handleSwitchBtnClick
               </div>
             </div>
           </div>
-          <div class="deck-save" v-if="sidebarSelectedStatus === false">
+          <div class="deck-save" v-if="settingDeckStatus === true">
             <div class="deck-save-title-section">
               <div class="deck-save-title-section-top">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-5 stroke-2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5"></path></svg>

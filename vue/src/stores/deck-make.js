@@ -1,6 +1,7 @@
 import { ref, computed } from "vue";
 import { defineStore } from "pinia";
-// import axios from "axios";
+import axios from "axios";
+import Swal from 'sweetalert2'
 
 export const useDeckMakeStore = defineStore("deck-make", () => {
   const selectedCards = ref([]);
@@ -252,6 +253,15 @@ export const useDeckMakeStore = defineStore("deck-make", () => {
     switchSortMode();
   }
 
+  // 傳送給後端存入資料庫
+  const sendDeckToDatabase = async(deckData) => {
+    const userToken = localStorage.getItem('token');
+    const res = await axios.post('http://localhost:3000/api/add-deck', 
+      { userToken, deckData });
+    console.log(res.data);
+    return res
+  }
+
   return {
     addCard,
     removeCard,
@@ -269,5 +279,6 @@ export const useDeckMakeStore = defineStore("deck-make", () => {
     sortStatus,
     switchSortMode,
     handleSwitchBtnClick,
+    sendDeckToDatabase
   };
 });
